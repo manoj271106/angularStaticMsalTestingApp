@@ -16,22 +16,22 @@ const isIE = window.navigator.userAgent.indexOf("MSIE ") > -1 || window.navigato
  */
 export const b2cPolicies = {
     names: {
-        signUpSignIn: 'B2C_1_susi_v2',
+        signUpSignIn: 'B2C_1A_B2C_IOP_SIGNIN',
         resetPassword: 'B2C_1_reset_v3',
         editProfile: 'B2C_1_edit_profile_v2',
     },
     authorities: {
         signUpSignIn: {
-            authority: 'https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_susi_v2',
+            authority: 'https://DrivesAzureb2c.b2clogin.com/DrivesAzureb2c.onmicrosoft.com/B2C_1A_B2C_IOP_SIGNIN',
         },
         resetPassword: {
-            authority: 'https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/B2C_1_reset_v3',
+            authority: 'https://DrivesAzureb2c.b2clogin.com/DrivesAzureb2c.onmicrosoft.com/B2C_1_reset_v3',
         },
         editProfile: {
-            authority: 'https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/b2c_1_edit_profile_v2',
+            authority: 'https://DrivesAzureb2c.b2clogin.com/DrivesAzureb2c.onmicrosoft.com/b2c_1_edit_profile_v2',
         },
     },
-    authorityDomain: 'fabrikamb2c.b2clogin.com',
+    authorityDomain: 'DrivesAzureb2c.b2clogin.com',
 };
 
 /**
@@ -41,7 +41,7 @@ export const b2cPolicies = {
  */
 export const msalConfig: Configuration = {
     auth: {
-        clientId: '9067c884-9fa6-414f-9aa4-a565b1cb46be', // This is the ONLY mandatory field that you need to supply.
+        clientId: '5370d553-3638-4bbc-a86c-1bf2ef008a12', // This is the ONLY mandatory field that you need to supply.
         authority: b2cPolicies.authorities.signUpSignIn.authority, // Defaults to "https://login.microsoftonline.com/common"
         knownAuthorities: [b2cPolicies.authorityDomain], // Mark your B2C tenant's domain as trusted.
         redirectUri: '/auth', // Points to window.location.origin by default. You must register this URI on Azure portal/App Registration.
